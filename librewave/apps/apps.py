@@ -3,6 +3,12 @@
 import reflex as rx
 
 from rxconfig import config
+from apps.content.presentation.pages import (
+    content_create_page,
+    content_list_page,
+    content_update_page,
+    content_detail_page,
+)
 
 
 class State(rx.State):
@@ -31,8 +37,13 @@ def index() -> rx.Component:
             justify="center",
             min_height="85vh",
         ),
+        rx.logo(),
     )
 
 
 app = rx.App()
 app.add_page(index)
+app.add_page(content_list_page, route="/contents")
+app.add_page(content_create_page, route="/contents/create")
+app.add_page(content_detail_page, route="/contents/<int:content_id>")
+app.add_page(content_update_page, route="/contents/<int:content_id>/update")
