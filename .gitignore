@@ -158,3 +158,4 @@ var/
 venv.bak/
 venv/
 wheels/
+postgres_data/
