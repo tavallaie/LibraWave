@@ -40,6 +40,8 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
+    path("api/auth/", include("dj_rest_auth.urls")),
+    path("api/auth/registration/", include("dj_rest_auth.registration.urls")),
     path("api/contents/", include(("contents.urls", "contents"), namespace="contents")),
 ]
 if settings.DEBUG:
