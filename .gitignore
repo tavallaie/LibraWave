@@ -159,5 +159,5 @@ venv.bak/
 venv/
 wheels/
 postgres_data/
-backend/librewave/media/
+backend/ZenithVault/media/
 backend/uploads/
