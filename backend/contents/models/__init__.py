@@ -4,7 +4,7 @@ from .file_content import FileContent
 from .text_content import TextContent
 from .metadata import MetaDataField, MetaDataValue
 
-__ALL__ = [
+__all__ = [
     "Content",
     "ContentType",
     "FileContent",
